@@ -1,16 +1,89 @@
-name: Matheus Lubarino
-description: Um  blog sobre o que ando apredendo por ai
-meta_description: "mean, programação,java,backend,back-end,frontend,front-end,java,angular"
+title:            Matheus Lubarino
+description:      Um site mostrando o que ando apredendo por ai.
+disqus_shortname: 
+reading_time:     true
+words_per_minute: 200
+# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
+# When testing locally leave blank or use http://localhost:4000
+url:
 
-markdown: kramdown
+# Owner/author information
+owner:
+  name:           Matheus Lubarino
+  avatar:         avatar.jpg
+  bio:            "Desenvolvedor FullStack - Pernambucano"
+  email:          matheus.lubarino1@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  twitter:        lubarinobr
+  facebook:       
+  github:         lubarinobr
+  stackexchange:  
+  linkedin:       
+  instagram:      
+  flickr:         
+  tumblr:         
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:
+
+# Background image to be tiled on all pages
+background: 
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:   
+google_verify:      
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:         
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/Recife
+future:      true
 highlighter: rouge
-logo: false
-paginate: 15
-baseurl: /
-domain_name: 'http://lubarino.github.io'
-google_analytics: 'UA-XXXXXXXX-X'
-gems: [jekyll-paginate]
+markdown:    kramdown
+gems:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
+sass:
+  sass_dir: _sass
+  style: compressed
 
-# Details for the RSS feed generator
-url:            'blog url'
-author:         'Matheus Lubarino'
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
+include: 
+  - .htaccess
+exclude: 
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp
