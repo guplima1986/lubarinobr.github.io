@@ -4,6 +4,7 @@ title: "Utilizando EditorConfig para padronização de editor"
 description: "O começo de tudo."
 tags: [editorConfig, programador,editor de texto,DevOps]
 modified: 2017-07-25
+comments: true
 image:
   
 ---
