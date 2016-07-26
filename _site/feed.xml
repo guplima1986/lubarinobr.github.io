@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-07-18T00:40:02-03:00</updated><id>/</id><title>Matheus Lubarino</title><subtitle>Um site mostrando o que ando apredendo por ai.</subtitle><entry><title>O Começo</title><link href="/O-Comeco/" rel="alternate" type="text/html" title="O Começo" /><published>2016-07-17T00:00:00-03:00</published><updated>2016-07-17T00:00:00-03:00</updated><id>/O-Comeco</id><content type="html" xml:base="/O-Comeco/">&lt;figure&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-07-25T22:13:54-03:00</updated><id>/</id><title>Matheus Lubarino</title><subtitle>Um site mostrando o que ando apredendo por ai.</subtitle><entry><title>Utilizando EditorConfig para padronização de editor</title><link href="/Resolvendo-problemas-de-encode/" rel="alternate" type="text/html" title="Utilizando EditorConfig para padronização de editor" /><published>2016-07-25T00:00:00-03:00</published><updated>2016-07-25T00:00:00-03:00</updated><id>/Resolvendo-problemas-de-encode</id><content type="html" xml:base="/Resolvendo-problemas-de-encode/">&lt;figure&gt;
+	&lt;img src=&quot;/images/editorConfig.png&quot; alt=&quot;Editor Config&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;Você muito provavelmente já teve problema com o encoded ou identação trabalhando em um projeto em equipe, cada programador tem sua IDE ou Editor de Texto com suas configurações preferidas e com isso os problemas surgem, caracteres quebrados, identação por espaço ao invés de tab , identação arquivos .alguma-coisa errada. Mas para isso existe solução e aqui vou mostrar como configurar o plugin do &lt;a href=&quot;http://editorconfig.org/&quot;&gt;editorConfig&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;o-que--editorconfig&quot;&gt;O que é EditorConfig&lt;/h2&gt;
+
+&lt;blockquote&gt;EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs.&lt;/blockquote&gt;
+
+&lt;p&gt;Ele simplesmete é um arquivo .editorconfig que pode ser configurado com o estilo de codificação planejado pela equipe. Ele pode ser utilizado em diversos editores como por exemplo o Sublime, ATOM e IDE como o eclipse e NetBeans. Você pode conferir se o seu editor preferido oferece suporte ao editorConfig &lt;a href=&quot;http://editorconfig.org&quot;&gt; aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aqui você pode ver um exemplo do arquivo de configuração minima.&lt;/p&gt;
+
+&lt;figure&gt;
+	&lt;img src=&quot;/images/editorConfigFile.png&quot; alt=&quot;Editor Config&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Você pode provisionar o arquivo para que toda a sua equipe utilize o mesmo coding style independente da configuração do editor do desenvolvedor&lt;/p&gt;
+
+&lt;h2 id=&quot;instalando-o-editorconfig-no-eclipse&quot;&gt;Instalando o editorConfig no eclipse&lt;/h2&gt;
+
+&lt;p&gt;Para utilizar o editorConfig no seu eclipse basta instalar o plugin que pode ser encontrado no eclipse MarketPlace.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/editorConfigMarket.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ou no github do projeto &lt;a href=&quot;https://github.com/ncjones/editorconfig-eclipse#readme&quot;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/editorConfigGithub.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;utilizando-o-editorconfig&quot;&gt;Utilizando o editorConfig&lt;/h2&gt;
+
+&lt;p&gt;O charset que está sendo utilizado para esse tutorial será do LATIM1 para o UTF-8&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/editorCharset.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para começamos a utilizar o editorConfig você precisar criar um arquivo .editorconfig no root do projeto, eu irei utilizar a configuração minima.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[*]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;end_of_line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lf&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;insert_final_newline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[*.{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;charset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[*.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;indent_style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;indent_style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;indent_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3&gt;Explicação&lt;/h3&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[*]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;end_of_line&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lf&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;insert_final_newline&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Aqui informo que a configuração do editor será aplicado em todo o projeto  e que para todo fim de linha será adicionado uma nova linha.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;[*.{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;js&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;charset&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;UTF-8&quot;&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[*.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;indent_style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;xml&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;}]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;indent_style&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tab&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;indent_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Definimos a configuração do charset para os arquivos .java e .js e apenas a identação por tab para os arquivos .java.
+Também defino uma configuração personalizada para o pom.xml&lt;/p&gt;
+
+&lt;p&gt;Basta você salvar o arquivo e todo o projeto estará configurado com o coding style definido no arquivo. Caso o editor não tenha sido configurado depois de ter salvo basta formatar o projeto novamente (CTRL + SHIFT + K) no root do projeto.&lt;/p&gt;
+
+&lt;p&gt;O editorConfig é uma ferramenta muito útil, principalmente como se trabalha em equipe a configuração também é bastante simples e personalizável onde você pode está implementado a medida das suas necessidades basta ver sua documentação.&lt;/p&gt;
+
+&lt;p&gt;Espero que isso ajude a todos vocês.&lt;/p&gt;</content><category term="editorConfig" /><category term="programador" /><category term="editor de texto" /><category term="DevOps" /><summary>Você muito provavelmente já teve problema com o encoded ou identação trabalhando em um projeto em equipe, cada programador tem sua IDE ou Editor de Texto com suas configurações preferidas e com isso os problemas surgem, caracteres quebrados, identação por espaço ao invés de tab , identação arquivos .alguma-coisa errada. Mas para isso existe solução e aqui vou mostrar como configurar o plugin do editorConfig</summary></entry><entry><title>O Começo</title><link href="/O-Comeco/" rel="alternate" type="text/html" title="O Começo" /><published>2016-07-17T00:00:00-03:00</published><updated>2016-07-17T00:00:00-03:00</updated><id>/O-Comeco</id><content type="html" xml:base="/O-Comeco/">&lt;figure&gt;
 	&lt;img src=&quot;/images/spock.jpg&quot; alt=&quot;Hello Spock&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;Bom para tudo há um começo e esse blog será o meu, a muito tempo tenho vontade de escrever um blog com o foco em T.I, compartilhando meus conhecimento e resolução de problemas que tive e irei ter.
