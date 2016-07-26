@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-07-25T22:27:28-03:00</updated><id>/</id><title>Matheus Lubarino</title><subtitle>Um site mostrando o que ando apredendo por ai.</subtitle><entry><title>Utilizando EditorConfig para padronização de editor</title><link href="/Resolvendo-problemas-de-encode/" rel="alternate" type="text/html" title="Utilizando EditorConfig para padronização de editor" /><published>2016-07-25T00:00:00-03:00</published><updated>2016-07-25T00:00:00-03:00</updated><id>/Resolvendo-problemas-de-encode</id><content type="html" xml:base="/Resolvendo-problemas-de-encode/">&lt;figure&gt;
-	&lt;img src=&quot;/images/editorConfig.png&quot; alt=&quot;Editor Config&quot; /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="lubarinobr.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="lubarinobr.github.io/" rel="alternate" type="text/html" /><updated>2016-07-25T22:36:33-03:00</updated><id>lubarinobr.github.io/</id><title>Matheus Lubarino</title><subtitle>Um site mostrando o que ando apredendo por ai.</subtitle><entry><title>Utilizando EditorConfig para padronização de editor</title><link href="lubarinobr.github.io/Resolvendo-problemas-de-encode/" rel="alternate" type="text/html" title="Utilizando EditorConfig para padronização de editor" /><published>2016-07-25T00:00:00-03:00</published><updated>2016-07-25T00:00:00-03:00</updated><id>lubarinobr.github.io/Resolvendo-problemas-de-encode</id><content type="html" xml:base="lubarinobr.github.io/Resolvendo-problemas-de-encode/">&lt;figure&gt;
+	&lt;img src=&quot;lubarinobr.github.io/images/editorConfig.png&quot; alt=&quot;Editor Config&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;Você muito provavelmente já teve problema com o encoded ou identação trabalhando em um projeto em equipe, cada programador tem sua IDE ou Editor de Texto com suas configurações preferidas e com isso os problemas surgem, caracteres quebrados, identação por espaço ao invés de tab , identação arquivos .alguma-coisa errada. Mas para isso existe solução e aqui vou mostrar como configurar o plugin do &lt;a href=&quot;http://editorconfig.org/&quot;&gt;editorConfig&lt;/a&gt;&lt;/p&gt;
 
@@ -12,7 +12,7 @@
 &lt;p&gt;Aqui você pode ver um exemplo do arquivo de configuração minima.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;/images/editorConfigFile.png&quot; alt=&quot;Editor Config&quot; /&gt;
+	&lt;img src=&quot;lubarinobr.github.io/images/editorConfigFile.png&quot; alt=&quot;Editor Config&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Você pode provisionar o arquivo para que toda a sua equipe utilize o mesmo coding style independente da configuração do editor do desenvolvedor&lt;/p&gt;
@@ -21,17 +21,17 @@
 
 &lt;p&gt;Para utilizar o editorConfig no seu eclipse basta instalar o plugin que pode ser encontrado no eclipse MarketPlace.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/editorConfigMarket.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;lubarinobr.github.io/images/editorConfigMarket.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ou no github do projeto &lt;a href=&quot;https://github.com/ncjones/editorconfig-eclipse#readme&quot;&gt;aqui&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/editorConfigGithub.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;lubarinobr.github.io/images/editorConfigGithub.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;utilizando-o-editorconfig&quot;&gt;Utilizando o editorConfig&lt;/h2&gt;
 
 &lt;p&gt;O charset que está sendo utilizado para esse tutorial será do LATIM1 para o UTF-8&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/editorCharset.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;lubarinobr.github.io/images/editorCharset.png&quot; alt=&quot;Editor Config&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Para começamos a utilizar o editorConfig você precisar criar um arquivo .editorconfig no root do projeto, eu irei utilizar a configuração minima.&lt;/p&gt;
 
@@ -83,8 +83,8 @@ Também defino uma configuração personalizada para o pom.xml&lt;/p&gt;
 
 &lt;p&gt;O editorConfig é uma ferramenta muito útil, principalmente como se trabalha em equipe a configuração também é bastante simples e personalizável onde você pode está implementado a medida das suas necessidades basta ver sua documentação.&lt;/p&gt;
 
-&lt;p&gt;Espero que isso ajude a todos vocês.&lt;/p&gt;</content><category term="editorConfig" /><category term="programador" /><category term="editor de texto" /><category term="DevOps" /><summary>Você muito provavelmente já teve problema com o encoded ou identação trabalhando em um projeto em equipe, cada programador tem sua IDE ou Editor de Texto com suas configurações preferidas e com isso os problemas surgem, caracteres quebrados, identação por espaço ao invés de tab , identação arquivos .alguma-coisa errada. Mas para isso existe solução e aqui vou mostrar como configurar o plugin do editorConfig</summary></entry><entry><title>O Começo</title><link href="/O-Comeco/" rel="alternate" type="text/html" title="O Começo" /><published>2016-07-17T00:00:00-03:00</published><updated>2016-07-17T00:00:00-03:00</updated><id>/O-Comeco</id><content type="html" xml:base="/O-Comeco/">&lt;figure&gt;
-	&lt;img src=&quot;/images/spock.jpg&quot; alt=&quot;Hello Spock&quot; /&gt;
+&lt;p&gt;Espero que isso ajude a todos vocês.&lt;/p&gt;</content><category term="editorConfig" /><category term="programador" /><category term="editor de texto" /><category term="DevOps" /><summary>Você muito provavelmente já teve problema com o encoded ou identação trabalhando em um projeto em equipe, cada programador tem sua IDE ou Editor de Texto com suas configurações preferidas e com isso os problemas surgem, caracteres quebrados, identação por espaço ao invés de tab , identação arquivos .alguma-coisa errada. Mas para isso existe solução e aqui vou mostrar como configurar o plugin do editorConfig</summary></entry><entry><title>O Começo</title><link href="lubarinobr.github.io/O-Comeco/" rel="alternate" type="text/html" title="O Começo" /><published>2016-07-17T00:00:00-03:00</published><updated>2016-07-17T00:00:00-03:00</updated><id>lubarinobr.github.io/O-Comeco</id><content type="html" xml:base="lubarinobr.github.io/O-Comeco/">&lt;figure&gt;
+	&lt;img src=&quot;lubarinobr.github.io/images/spock.jpg&quot; alt=&quot;Hello Spock&quot; /&gt;
 &lt;/figure&gt;
 &lt;p&gt;Bom para tudo há um começo e esse blog será o meu, a muito tempo tenho vontade de escrever um blog com o foco em T.I, compartilhando meus conhecimento e resolução de problemas que tive e irei ter.
 A ideia desse blog é simplesmente compartilhar conhecimento com a comunidade, sempre tive vontade de ter um lugar para compartilhar e discuti sobre tudo ou praticamente tudo.
@@ -92,16 +92,16 @@ Eu nunca fui uma pessoa de falar longos textos tentando enrolar alguma coisa, se
 
 &lt;h2 id=&quot;mais-um-blog-na-rea-de-ti&quot;&gt;Mais um blog na área de T.I…&lt;/h2&gt;
 &lt;figure&gt;
-	&lt;img src=&quot;/images/bean-bored.gif&quot; alt=&quot;mr. bean entediado&quot; /&gt;
+	&lt;img src=&quot;lubarinobr.github.io/images/bean-bored.gif&quot; alt=&quot;mr. bean entediado&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;É… Eu também pensei isso antes de começar a escrever esse blog, milhares de blog na área , muita gente falando sobre linguagens, DevOps, Metodologia Ágil e tudo mais. Mas então o que eu irei escrever aqui ? Irei escrever o que mais sinto falta nos blogs. Falar do dia a dia, resolver problemas que não achamos fácil e mostrar o que ando aprendendo por ai de novo(é isso eu não iria achar em outro blog,site), pretendo trazer guias completos e não ficar preso somento a uma linguagem ou metodologia por exemplo. Quero explorar e mostrar esse mundo a todos vocês.&lt;/p&gt;
 
 &lt;h2 id=&quot;bom-bom-ta-me-conveceu&quot;&gt;Bom, Bom, ta me conveceu.&lt;/h2&gt;
 &lt;figure&gt;
-	&lt;img src=&quot;/images/jim-ok.gif&quot; alt=&quot;jim carey ok&quot; /&gt;
+	&lt;img src=&quot;lubarinobr.github.io/images/jim-ok.gif&quot; alt=&quot;jim carey ok&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;Bom, se eu consegui lhe convecer seja pelos gifs ou por você confiar no pouco que falei aqui, peço a vocês que me acompanhe nessa nova trajetória e que eu possa ajudar a você e também aprender com você. Farei o possível para manter o blog atualizado pelo menos com um novo artigo por semana e sempre que tiver resolvido um problema rápido tentarei atualizar aqui. Por enquato é isso pessoal.&lt;/p&gt;</content><category term="começo" /><category term="programador" /><category term="linguagens de programação" /><summary>Bom para tudo há um começo e esse blog será o meu, a muito tempo tenho vontade de escrever um blog com o foco em T.I, compartilhando meus conhecimento e resolução de problemas que tive e irei ter.
 A ideia desse blog é simplesmente compartilhar conhecimento com a comunidade, sempre tive vontade de ter um lugar para compartilhar e discuti sobre tudo ou praticamente tudo.
-Eu nunca fui uma pessoa de falar longos textos tentando enrolar alguma coisa, sempre tentei ser ao máximo preciso e tentarei trazer isso para vocês, quero falar como resolver um problema de forma rápida e bastante objetiva.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;feature&quot;=&gt;&quot;o-comeco.jpg&quot;}" /></entry></feed>
+Eu nunca fui uma pessoa de falar longos textos tentando enrolar alguma coisa, sempre tentei ser ao máximo preciso e tentarei trazer isso para vocês, quero falar como resolver um problema de forma rápida e bastante objetiva.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="lubarinobr.github.io{&quot;feature&quot;=&gt;&quot;o-comeco.jpg&quot;}" /></entry></feed>
