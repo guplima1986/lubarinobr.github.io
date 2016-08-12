@@ -132,6 +132,145 @@
   <header>
     
     <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2016-08-12T00:00:00-03:00"><a href="/Trabalhando-com-reflections-part-1-(Field)/">August 12, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Matheus Lubarino">Matheus Lubarino</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+Reading time ~2 minutes
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/Trabalhando-com-reflections-part-1-(Field)/" rel="bookmark" title="Trabalhando com Reflections Parte I" itemprop="url">Trabalhando com Reflections Parte I</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <figure>
+	<img src="/images/reflection.jpg" alt="Java Reflection" />
+</figure>
+
+<p>Bom pessoal, venho aqui falar um pouco sobre Reflection, mas antes de começamos irei especificar um pouco sobre o conceito da Reflecção.</p>
+
+<blockquote>Reflection é a capacidade de um programa se observar (Introspecção), podendo obter informações de si mesmo e modificar sua estrutura, o paradigma de reflexão pode também ajudar na melhoria do código </blockquote>
+
+<h2 id="utilizando-reflection">Utilizando Reflection</h2>
+
+<p>Como de toda natureza de um programa o mesmo tende a crescer seja ela de forma planejada ou não, independente da forma que o mesmo cresce a gente se depara com uns métodos desse tipo.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">foo</span><span class="o">{</span>
+
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">existeNulos</span><span class="o">(</span><span class="n">Bar</span> <span class="n">bar</span><span class="o">){</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">bar</span><span class="o">.</span><span class="na">getId</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">bar</span><span class="o">.</span><span class="na">getName</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">bar</span><span class="o">.</span><span class="na">getAge</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">bar</span><span class="o">.</span><span class="na">getAdress</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">bar</span><span class="o">.</span><span class="na">getPhone</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">bar</span><span class="o">.</span><span class="na">getCellPhone</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+
+		<span class="k">if</span><span class="o">(</span><span class="n">bar</span><span class="o">.</span><span class="na">getDocument</span><span class="o">()</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+			<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+		<span class="o">}</span>
+
+	<span class="o">}</span> 
+
+	<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+<span class="o">}</span>
+
+</code></pre>
+</div>
+
+<p>Okay, também concordo que isso não é nenhuma grande método mas aposto que um dia ela poderá se tornar. O exemplo acima mostra que sempre que um novo atributo for adicionado na classe você vai ter que vim aqui e validar se o novo atributo é nulo.</p>
+
+<p>Mas Como eu disse anteriomente, a Reflection tem uma característica que é de melhoria no código, seja ela de perfomace ou/e de refactory, então se eu fosse verificar se existe algum atributo nulo com Reflection eu simplesmente implementaria isso.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">foo</span><span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">existeNulos</span><span class="o">(</span><span class="n">Object</span> <span class="n">obj</span><span class="o">){</span>
+ 		<span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">clazz</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+
+		<span class="k">try</span> <span class="o">{</span>
+			<span class="k">for</span><span class="o">(</span><span class="n">Field</span> <span class="n">field</span> <span class="o">:</span> <span class="n">clazz</span><span class="o">.</span><span class="na">getDeclaredFields</span><span class="o">()){</span>
+				<span class="n">field</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+				<span class="n">Object</span> <span class="n">value</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+				<span class="k">if</span><span class="o">(</span><span class="n">value</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+					<span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+				<span class="o">}</span>
+			<span class="o">}</span>
+		<span class="o">}</span><span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+			<span class="k">throw</span> <span class="k">new</span> <span class="nf">RuntimeException</span><span class="o">(</span><span class="s">"Erro ao ler campo"</span><span class="o">);</span>
+		<span class="o">}</span>
+
+			<span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+		<span class="o">}</span>
+				
+	<span class="o">}</span>
+
+</code></pre>
+</div>
+
+<p>Visivelmente meu código se tornou muito menos cansativo de ler e outro beneficio é que agora você pode validar qualquer atributo de qualquer objeto, evitando repetição de código.</p>
+
+<h2 id="entendo-um-pouco-sobre-o-cdigo">Entendo um pouco sobre o código</h2>
+
+<p>A primeiro coisa a ser feita é pegar a class do objeto passado por parâmetro</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>	<span class="n">Class</span><span class="o">&lt;?&gt;</span> <span class="n">clazz</span> <span class="o">=</span> <span class="n">obj</span><span class="o">.</span><span class="na">getClass</span><span class="o">();</span>
+</code></pre>
+</div>
+
+<p>Logo em seguida foi feito um forEach na lista de Atributos declarados utilizando o <b>getDeclaredFields()</b> que retornar todos atributos da classe. Caso você utilize o <b>getFields</b> só irá ser retornados os atributos públicos.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="k">try</span> <span class="o">{</span>
+   <span class="k">for</span><span class="o">(</span><span class="n">Field</span> <span class="n">field</span> <span class="o">:</span> <span class="n">clazz</span><span class="o">.</span><span class="na">getDeclaredFields</span><span class="o">()){</span>
+   <span class="o">...</span>
+</code></pre>
+</div>
+
+<p>Para cada atributo eu o torno acessível para que eu possa acessar seu estado e em seguida crio um atributo do tipo <b>Object</b> que recebe o valor do atributo, verifico se o mesmo é nulo ou não.</p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code>   <span class="n">field</span><span class="o">.</span><span class="na">setAccessible</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+   <span class="n">Object</span> <span class="n">value</span> <span class="o">=</span> <span class="n">field</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">obj</span><span class="o">);</span>
+   <span class="k">if</span><span class="o">(</span><span class="n">value</span> <span class="o">==</span> <span class="kc">null</span><span class="o">){</span>
+      <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+   <span class="o">}</span>
+</code></pre>
+</div>
+
+<h2 id="resumidamente-falando">Resumidamente falando</h2>
+<p>Isso é apena o começo de uma serie de artigos que irei fazer sobre reflection abordando sobre como trabalhar com  class,fields, methods e annotation.</p>
+
+<p>Até a próxima pessoal e não se esqueçam de deixar seu comentário com dúvidas ou críticas !</p>
+
+<h3>Referências</h3>
+<p><a>https://docs.oracle.com/javase/tutorial/reflect/</a></p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+    <div class="entry-meta">
       <span class="entry-date date published updated"><time datetime="2016-07-28T00:00:00-03:00"><a href="/Configurando-proxy-eclipse/">July 28, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Matheus Lubarino">Matheus Lubarino</a></span></span>
       
       <span class="entry-reading-time">
